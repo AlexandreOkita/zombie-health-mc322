@@ -2,7 +2,6 @@ package project.components;
 
 import project.interfaces.IDoctor;
 import project.interfaces.IAnswer;
-import project.interfaces.ITableProducer;
 import project.interfaces.ITreeProducer;
 
 public class Doctor implements IDoctor {
@@ -14,11 +13,6 @@ public class Doctor implements IDoctor {
 
     @Override
     public void connect(IAnswer answer) {
-
-    }
-
-    @Override
-    public void connect(ITableProducer producer) {
 
     }
 
