@@ -11,3 +11,4 @@ A documentação dos códigos que compõe este projeto, incluindo componentes, i
 * [Natan Rodrigues de Oliveira](https://github.com/natrodrigues)
 * [Caio Emanuel Rhoden](https://github.com/CaioRhoden)
 * [Alexandre Okita](https://github.com/AlexandreOkita)
+* [Luiz Fernando Bueno Rosa](https://github.com/LuizFBR)
