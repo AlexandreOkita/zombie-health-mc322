@@ -2,11 +2,11 @@
 Neste README teremos as documentações das Interfaces do projeto. Todas estão contidas nesse diretório. Segue abaixo documentação.
 
 ### Interface `IDoctor`
-Extende outras 4 interfaces: `IEnquirer`, `IAnswerReceptacle`, `ITableProducerReceptacle`, `ITreeProducerReceptacle`. Sendo responsável por aglomerar todas as atividades do Doutor, entre elas: conexão com o paciente para fazer perguntas, com árvore de decisão para fazer perguntas na ordem obtida e conexão com a tabela de entrada para lidar com os sintomas.
+Extende outras 4 interfaces: `IEnquirer`, `IAnswerReceptacle`, `ITableProducerReceptacle`, `ITreeProducerReceptacle`. Sendo responsável por aglomerar todas as atividades do Doutor, entre elas: conexão com o paciente para fazer perguntas e com a árvore de decisão para fazer perguntas na ordem ótima obtida.
 
 Método | Objetivo
 ------ | --------
-`connect` | `Responsável pela conexão com o paciente, a árvore de decisão e a tabela de entrada, de acordo com a assinatura do método (sobrecarga de método)`
+`connect` | `Responsável pela conexão com o paciente e com a árvore de decisão, de acordo com a assinatura do método (sobrecarga de método)`
 
 ### Interface `IAnswerReceptacle`
 Faz a conexão entre as componentes **Doctor** e **Patient**. Responsável por passar as perguntas e diagnóstico de **Doctor** a **Patient**.
