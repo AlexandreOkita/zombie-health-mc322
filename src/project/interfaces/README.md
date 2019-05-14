@@ -6,7 +6,7 @@ Extende outras 4 interfaces: `IEnquirer`, `IAnswerReceptacle`, `ITableProducerRe
 
 Método | Objetivo
 ------ | --------
-`<no method>` | `<no method>`
+`connect` | `Responsável pela conexão com o paciente, a árvore de decisão e a tabela de entrada, de acordo com a assinatura do método (sobrecarga de método)`
 
 ### Interface `IAnswerReceptacle`
 Faz a conexão entre as componentes **Doctor** e **Patient**. Responsável por passar as perguntas e diagnóstico de **Doctor** a **Patient**.
