@@ -67,6 +67,26 @@ public interface IPatient extends IAnswer, ITableProducerReceptacle {
 }
 ```
 
+## Componente `Doctor`
+Campo | Valor
+----- | -----
+Classe | `project.components.Doctor`
+Autores | `Dino Scientists`
+Objetivo | `Implementar métodos para fazer as perguntas ao paciente`
+Interface | `IDoctor`
+
+```
+public void startInterview() {
+...
+}
+public void connect(IAnswer answer) {
+...
+}
+public void connect(ITreeProducer treeProducer) {
+...
+}
+```
+
 ## Componente `SecondOpinion`
 Campo | Valor
 ----- | -----
