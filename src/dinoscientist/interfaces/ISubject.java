@@ -1,4 +1,4 @@
 public interface ISubject{
-  public void attachCRM(ICRM conselho);
-  public void dettachCRM(ICRM conselho);
+  public void attachCRM(ICRM council);
+  public void dettachCRM(ICRM council);
 }
