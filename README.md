@@ -12,3 +12,4 @@ A documentação dos códigos que compõe este projeto, incluindo componentes, i
 * [Caio Emanuel Rhoden](https://github.com/CaioRhoden)
 * [Alexandre Okita](https://github.com/AlexandreOkita)
 * [Luiz Fernando Bueno Rosa](https://github.com/LuizFBR)
+* [Sinara Caonetto Pamplona] (https://github.com/SinaraP)
