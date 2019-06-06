@@ -1,27 +1,17 @@
 package dinoscientist.main;
 
+import dinoscientist.components.Patient;
+import dinoscientist.factories.ComponentFactory;
 import dinoscientist.factories.GeneralFactory;
-import dinoscientist.interfaces.IComponentFactory;
+import dinoscientist.interfaces.IClient;
+import dinoscientist.interfaces.IComponent;
 
 public class Main{
-    public static void main(String[] args){
-        /**
-         * Primeira atividade da main será abrir a tabela de entrada e mandar para os responsáveis
-         * aka segunda opiniao e tabela de correlações
-         * Então, vamos pedir ao factory esses componentes e mandar a tabela para eles
-        */
-        IComponentFactory opinionFactory = GeneralFactory.createFactory("Opinion");
-        //    GeneralFactory.createFactory("opinion").createSecondOpinion(DATASET) ????
-        //aqui fica a tabela que lê o dataset... nao sei como criar
-        
-        /**
-         * primeiraOpiniao = opinionFactory.createPrimeiraOpiniao(tabela);
 
-            conselhoDeDoutores(segundaopiniao);
-
-            opinionFactory.createDoctor(primeiraOPiniao, paciente);
-
-         */
+    public static void main(String[] args) {
+        ComponentFactory factory = GeneralFactory.createFactory("client");
+        IClient patient = (IClient) factory.getComponent();
+        System.out.println(patient.test());
         
     }
 }

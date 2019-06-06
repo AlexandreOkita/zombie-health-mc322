@@ -1,5 +1,6 @@
 package dinoscientist.interfaces;
 
-import dinoscientist.interfaces.IComponent;
-
-public interface IClient extends IComponent{}
+public interface IClient extends IComponent{
+    // TODO: 06/06/19 implementar a assinatura dos metodos do patient
+    public int test();
+}
