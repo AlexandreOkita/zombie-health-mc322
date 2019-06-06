@@ -1,14 +1,20 @@
 public class Doctor implements IDoctor, ISubject{
   private String name;
   private String f_opinion;
-  private ICRM conselho;
+  private ICRM council;
+  private IPatient patient;
 
   public Doctor(String name){
     this.name = name;
     f_opinion = null;
-    conselho = null;
+    council = null;
+    patient = null;
   }
-
+  
+  public void connect(IPatient patient){
+    this.patient = patient;
+  }
+    
   public String diagnostic(IPatient pat, ArrayList...){ //ARRUMAR PARAMETROS
     String opinion;
     opinion = method();//TROCAR AQUI NOME DA FUNCAO
@@ -28,10 +34,10 @@ public class Doctor implements IDoctor, ISubject{
   }
 
   public void attachCRM(ICRM conselho){
-    this.conselho = conselho;
+    this.council = council;
   }
 
   public void dettachCRM(){
-    conselho = null;
+    council = null;
   }
 }
