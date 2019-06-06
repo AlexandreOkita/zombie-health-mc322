@@ -1,5 +1,5 @@
 package dinoscientist.components;
 
-import dinoscientist.components.Client;
+import dinoscientist.interfaces.IClient;
 
-public class Patient extends Client{}
+public class Patient implements IClient{}

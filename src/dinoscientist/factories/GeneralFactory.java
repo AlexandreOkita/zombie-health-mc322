@@ -1,12 +1,13 @@
 package dinoscientist.factories;
 
-import dinoscientist.interfaces.IComponentFactory;
+import dinoscientist.factories.ComponentFactory;
+import dinoscientist.factories.ClientFactory;
 
 public class GeneralFactory{
-    public static IComponentFactory createFactory(String ftype){
-        IComponentFactory result = null;
-        if(ftype.equals("Opinion")){
-            result = new OpinionFactory();
+    public static ComponentFactory createFactory(String ftype){
+        ComponentFactory result = null;
+        if(ftype.equals("client")){
+            result = new ClientFactory();
         }
         return result;
     }
