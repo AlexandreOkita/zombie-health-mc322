@@ -13,11 +13,7 @@ public class Patient implements IClient{
         this.DataSet = data;    // (2) pegue um sintoma randômico;
     }
     
-    public void generateDisease(){
-        
-        int n_diseases;
-        String sintomas[] = DataSet.requestAttributes();
-        for ( n_diseases = 0; n_diseases < sintomas.length; n_diseases++ ){} // Incrementador de n_diseases.
+    public void generateDisease(int n_diseases){
         
         Random rand = new Random();
         
@@ -25,7 +21,6 @@ public class Patient implements IClient{
         
         for ( int idx = 0 ; idx < n_diseases ; idx++ ){
             disease[idx] = rand.nextInt(2);
-            System.out.println(disease[idx]);
         }
     }
 
