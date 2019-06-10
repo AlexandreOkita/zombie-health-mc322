@@ -29,7 +29,7 @@ for (SintomaDoenca sd : lista) {
           Pele azul, T-Virus 
 ```
 
-## Componente `CRM(Centro Regional de Médicos)`
+## Componente `CRM (Centro Regional de Médicos)`
 Campo | Valor
 ----- | -----
 Classe | `br.unicamp.mc322.zumbidocapi.Examine`
