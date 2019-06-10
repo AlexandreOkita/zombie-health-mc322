@@ -17,7 +17,7 @@ String dataset = "zombie-health-new-cases500.csv";
 List<SintomaDoenca> lista = quest.list(dataset);
 for (SintomaDoenca sd : lista) {
     System.out.println(sd.getSintoma()+", "+sd.getDoenca());
-		}
+}
 
 //saída:  Olho vermelho, Gripe Aviaria
           Dor no Peito, Infecção Viral
