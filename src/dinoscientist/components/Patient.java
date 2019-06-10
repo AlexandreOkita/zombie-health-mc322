@@ -1,33 +1,56 @@
-public class Patient implements IClient{
+import java.util.Random;
+import java.util.Hashtable<K,V>;
 
-    private ArrayList<Integer> disease;
-    private int n_sintomas;
+public class Patient implements IClient{
+    
+    private String name;
+
+    private Hashtable<String,Int> disease;
 
     private IDataSet DataSet;
+    
+    private ICRM crm;
+        
+    public Patient( String nome ){
+        this.some = nome;
+    }
+    
+    pubic void connectCRM ( ICRM crm ){
+        this.crm = crm;
+    }
 
-    public void dataSetConnect( IDataSet data ){
-        this.DataSet = data;    // (2) pegue um sintoma randômico;
-        String[] att = dataset.requestAttributes();
-        int i;
-        for ( i = 0 ; i < att.length ; ++i ){}
-        this.n_sintomas = i;
+    public void connectDataSet( IDataSet data ){
+        this.DataSet = data;    // (2) pegue um sintoma randômico
     }
     
     public void setDisease(int n_diseases){
         
         Random rand = new Random();
         
-        this.disease = new ArrayList<>();
+        this.disease = new Hashtable<String,Int>();
         
-        for ( int idx = 0 ; idx < n_diseases ; idx++ ){
-            disease.add(rand.nextInt(2));
+        String[] att = dataset.requestAttributes();
+        for ( String sin : att ){
+            disease.put( sin , rand.nextInt(2) );
             System.out.println(disease.get(idx));
         }
     }
-    public ArrayList<Integer> getSintomas(){
-        return this.disease;
+    
+    public void getSecondOpinion(){
+        
+		List<String> outrasOpcoes = crm.execute(dataset, SintomasPat); // dataset é um pathing de um dataset global;
+		int i = 1;
+		for ( String opc : outrasOpcoes ) {
+			System.out.println(i+": "+opc);
+			i++;
+		}
     }
-    public int getN_sintomas(){
-        return this.n_sintomas;
+    
+    public int getSintoma( String key ){
+        return this.disease.get(idx);
+    }
+    
+    public String getName(){
+        return this.name
     }
 }
