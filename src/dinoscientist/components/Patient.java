@@ -1,30 +1,33 @@
-package dinoscientist.components;
-
-import dinoscientist.interfaces.IClient;
-import java.util.Random;
-
 public class Patient implements IClient{
 
-    private int[] disease;
+    private ArrayList<Integer> disease;
+    private int n_sintomas;
 
     private IDataSet DataSet;
 
     public void dataSetConnect( IDataSet data ){
         this.DataSet = data;    // (2) pegue um sintoma randômico;
+        String[] att = dataset.requestAttributes();
+        int i;
+        for ( i = 0 ; i < att.length ; ++i ){}
+        this.n_sintomas = i;
     }
     
-    public void generateDisease(int n_diseases){
+    public void setDisease(int n_diseases){
         
         Random rand = new Random();
         
-        this.disease = new int[n_diseases];
+        this.disease = new ArrayList<>();
         
         for ( int idx = 0 ; idx < n_diseases ; idx++ ){
-            disease[idx] = rand.nextInt(2);
+            disease.add(rand.nextInt(2));
+            System.out.println(disease.get(idx));
         }
     }
-
-    public int[] getSintomas(){
-        return this.disease; // 0 terá string
+    public ArrayList<Integer> getSintomas(){
+        return this.disease;
+    }
+    public int getN_sintomas(){
+        return this.n_sintomas;
     }
 }
