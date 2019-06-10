@@ -3,8 +3,9 @@ package dinoscientist.interfaces;
 import dinoscientist.interfaces.IComponent;
 
 public interface IClient extends IComponent{
-    public void dataSetConnect( IDataSet data );
+    pubic void connectCRM ( ICRM crm );
+    public void connectDataSet( IDataSet data );
     public void setDisease( int n_diseases );
-    public ArrayList<Integer> getSintomas();
-    public int getN_sintomas();
+    public int getSintoma( String key );
+    public String getName();
 }
