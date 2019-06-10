@@ -29,12 +29,23 @@ for (SintomaDoenca sd : lista) {
           Pele azul, T-Virus 
 ```
 
+
+## Classe `SintomaDoenca`
+Autores | `Dino Scientists`
+Objetivo | `A classe tem como função apenas armazenar um par de sintoma com uma doenca para o uso no componente PrimeiraOpiniao.`
+Métodos | `public String getSintoma()`
+	  `public String getDoenca()`
+	  `public String setSintoma()`
+	  `public String setDoenca()`
+Atributos | `private String sintoma
+	     private String doenca`
+	     
 ## Componente `CRM (Centro Regional de Médicos)`
 Campo | Valor
 ----- | -----
 Classe | `br.unicamp.mc322.zumbidocapi.Examine`
 Autores | `Dino Scientists`
-Objetivo | `O componente CRM (Examine) irá simular uma análise mais detalhada sobre o paciente para tentar sugerir a existência de doenças 'outliers'. Ele funciona dando o vetor completo de sintomas para o CRM que é analisado por um RandomForestRegressor do scikit-learn que roda em um servidor Ubuntu AWS.
+Objetivo | `O componente CRM (Examine) irá simular uma análise mais detalhada sobre o paciente para tentar sugerir a existência de doenças 'outliers'. Ele funciona dando o vetor completo de sintomas para o CRM que é analisado por um RandomForestRegressor do scikit-learn que roda em um servidor Ubuntu AWS.`
 
 
 ```
