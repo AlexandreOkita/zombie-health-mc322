@@ -32,7 +32,7 @@ for (SintomaDoenca sd : lista) {
 ## Componente `CRM(Centro Regional de Médicos)`
 Campo | Valor
 ----- | -----
-Classe | `br.unicamp.mc322.zumbidocapi.Questoes`
+Classe | `br.unicamp.mc322.zumbidocapi.Examine`
 Autores | `Dino Scientists`
 Objetivo | `O componente CRM (Examine) irá simular uma análise mais detalhada sobre o paciente para tentar sugerir a existência de doenças 'outliers'. Ele funciona dando o vetor completo de sintomas para o CRM que é analisado por um RandomForestRegressor do scikit-learn que roda em um servidor Ubuntu AWS.
 
