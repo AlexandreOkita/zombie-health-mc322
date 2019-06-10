@@ -4,10 +4,10 @@ public class Doctor implements IDoctor, ISubject{
   private ICRM council;
   private IPatient patient;
 
-  public Doctor(String name){
+  public Doctor(String name, ICRM crm){
     this.name = name;
     f_opinion = null;
-    council = null;
+    council = crm; //precisa no construtor?
     patient = null;
   }
   
@@ -20,8 +20,7 @@ public class Doctor implements IDoctor, ISubject{
     int answer;
     ArrayList<String> others_opinions;
     connect(pat);
-    System.out.println("Doctor: Hello, "+pat.getName());
-
+    System.out.println("Doctor: Hello, "+pat.getName()+ " I'm "+name);
     ArrayList<String> answers = new ArrayList<String>();
     for(SintomaDoenca ques: questions){
       System.out.println(ques+" ?");
@@ -43,20 +42,25 @@ public class Doctor implements IDoctor, ISubject{
     else{
       System.out.println(pat.getName()+" is not getting better :(");
       System.out.println("I will check with the council");
+      attachCRM(crm);
       others_opinions = notifyCRM(pat);
       System.out.println("Then, it is "+others_opinions.get(1));
-      return others_opinions.get(1);
+      System.out.println("**Taking care of patient (again)**")
+      if(pat.getDoenca().equalsIgnoreCase(f_opinion)){
+        System.out.println("We save "+pat.getNome());
+        return others_opinions.get(1);
+      }
     }
   }
 
   public String notifyCRM(IPatient pat, ArrayList<String> retList){
     String second_opinion;
-    second_opinion = council.updateDesease(pat); //trocar aqui nome da funcao
+    second_opinion = council.updateDesease(pat); //trocar aqui nome da funcao para o pattern do observer
       return f_opinion;
     }
   }
 
-  public void attachCRM(ICRM conselho){
+  public void attachCRM(ICRM council){
     this.council = council;
   }
 
