@@ -15,20 +15,31 @@ public class Doctor implements IDoctor, ISubject{
     this.patient = patient;
   }
     
-  public String diagnostic(IPatient pat, ArrayList...){ //ARRUMAR PARAMETROS
+  public String diagnostic(IPatient pat, ArrayList<SintomaDoenca> questions){ //ARRUMAR PARAMETROS
     String opinion;
-    opinion = method();//TROCAR AQUI NOME DA FUNCAO
-    f_opinion = opinion;
+    ArrayList<String> others_opinions;
+    connect(pat);
+    ArrayList<String> answers = new ArrayList<String>();
+    for(SintomaDoenca ques: questions){
+      answers.add(pat.getSintoma(ques.getSintoma()))//USAR HASH AQUI
+      
+    }
+    opinion = get();//TROCAR AQUI NOME DA FUNCAO
+    others_opinions = notifyCRM(pat);
+    if((second_opinion.get(0)).equalsIgnoreCase(f_opinion)){
+      System.out.println("It is "+f_opinion+" ,but could be "+others_opinions.get(1));
+      return f_opinion;
+    }
+    else{
+      f_opinion = f_opinion + " or " + others_opinions.get(0);
+      System.out.println(" "+f_opinion);
+    }
     return f_opinion;
   }
 
-  public String askOpinion2(IPatient pat){
+  public String notifyCRM(IPatient pat, ArrayList<String> retList){
     String second_opinion;
-    second_opinion = conselho.searchfordesease(pat); //trocar aqui nome da funcao
-    if(second_opinion.equalsIgnoreCase(f_opinion))
-      return f_opinion;
-    else{
-      f_opinion = f_opinion + " or " + second_opinion;
+    second_opinion = council.updateDesease(pat); //trocar aqui nome da funcao
       return f_opinion;
     }
   }
