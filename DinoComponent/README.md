@@ -3,9 +3,7 @@ Campo | Valor
 ----- | -----
 Classe | `br.unicamp.mc322.zumbidocapi.Questoes`
 Autores | `Dino Scientists`
-Objetivo | `O componente Decision Tree (Primeira Opinião) é responsável por fornecer ao doutor uma lista de perguntas na ordem de prioridade com base na tabela de correlação
-(a tabela de correlação mostra o quão relevante é um sintoma para determinado diagnóstico).
-Caso o paciente tenha um dos sintomas apontados pela lista, ele possui a doença que está atrelada ao sintoma.
+Objetivo | `O componente Decision Tree (Primeira Opinião) é responsável por fornecer ao doutor uma lista de perguntas na ordem de prioridade com base na tabela de correlaçãob(a tabela de correlação mostra o quão relevante é um sintoma para determinado diagnóstico). Caso o paciente tenha um dos sintomas apontados pela lista, ele possui a doença que está atrelada ao sintoma.
 
 ```
 public interface Question {
