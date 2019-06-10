@@ -35,12 +35,12 @@ Campo | Valor
 ----- | -----
 Autores | `Dino Scientists`
 Objetivo | `A classe tem como função apenas armazenar um par de sintoma com uma doenca para o uso no componente PrimeiraOpiniao.`
-Métodos | public String getSintoma()
-	  public String getDoenca()
-	  public String setSintoma()
-	  public String setDoenca()
-Atributos | `private String sintoma
-	     private String doenca`
+Métodos | `public String getSintoma()`
+	  `public String getDoenca()`
+	  `public String setSintoma()`
+	  `public String setDoenca()`
+Atributos | `private String sintoma`
+	    `private String doenca`
 	     
 ## Componente `CRM (Centro Regional de Médicos)`
 Campo | Valor
