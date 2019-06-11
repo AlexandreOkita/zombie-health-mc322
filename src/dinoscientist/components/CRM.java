@@ -1,8 +1,9 @@
 package dinoscientist.components;
 
 import dinoscientist.interfaces.IComponent;
+import dinoscientist.interfaces.ICRM;
 
-public class CRM implements ICRM, IObserver{
+public class CRM implements ICRM{
     
     Examine examine;
   
