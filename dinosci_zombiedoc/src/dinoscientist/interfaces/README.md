@@ -35,15 +35,6 @@ Método | Objetivo
 `requestAttributes` | `Toma uma lista de sintomas de um .csv global`
 `setDataSource` | `Carrega o dataset com a global.csv. Em seguida, o dataset faz as manipulações necessárias.`
 
-
-### Interface `ISecondOpinion`
-Extende outras três interfaces : `IDataSet`, `ISplitDataSet` e `IPatient`. Interface responsável por obter tanto a doença mais provável quanto a segunda mais provável, caso exista.
-
-Método | Objetivo
------- | --------
-`getHighestProbDisease` | Retorna uma string contendo a doença mais provável de ocorrer.
-`getSecHighestProbDisease` | Retorna uma string contendo a segunda doença mais provável de ocorrer, caso haja a certeza de uma doença apenas, retorna null.
-
 ### Interface `IFirst`
 Abstrai a Primeira Opinião, de modo a facilitar o e legibilizar fluxo de dados dentro do código;
 
