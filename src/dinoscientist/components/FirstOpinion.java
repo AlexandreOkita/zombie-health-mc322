@@ -4,9 +4,9 @@ import dinoscientist.interfaces.IFirst;
 import dinoscientist.interfaces.IComponent;
 
 public class FirstOpinion extends IFirst{
-    Question question;
+    IQuestion question;
 
-    public connect ( Question question ){
+    public connect ( IQuestion question ){
         this.question = question;
     }
 
