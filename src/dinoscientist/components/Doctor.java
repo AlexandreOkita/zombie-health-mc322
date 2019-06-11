@@ -3,18 +3,30 @@ public class Doctor implements IDoctor, ISubject{
     private String f_opinion;
     private ICRM council;
     private IPatient patient;
-    private List<SintomaDoenca> sintomas;
+    private List<SintomaDoenca> sintomas; //importantes para o uso da interface gráfica
+    private List<Integer> respostas;
 
     public Doctor(){
         this.name = this.toString();
         f_opinion = null;
         council = null;
         patient = null;
+        sintomas = null;
+        respostas = null;
     }
     
     public List<SintomaDoenca> getSintoma() {
         return sintomas;   
     }
+    
+    public List<Integer> getRespostas() {
+        return respostas;
+    }
+    
+    public String getFOpinion() {
+        return f_opinion;   
+    }
+    
     public void connect(IPatient patient){
        this.patient = patient; 
     }
@@ -47,6 +59,7 @@ public class Doctor implements IDoctor, ISubject{
 
         System.out.println("Doctor: I think it is "+f_opinion);
         System.out.println("**Taking care of patient**");
+        respostas = answers;
 
     //     if(pat.getDoenca().equalsIgnoreCase(f_opinion)){
     //       System.out.println("We save "+pat.getNome());
