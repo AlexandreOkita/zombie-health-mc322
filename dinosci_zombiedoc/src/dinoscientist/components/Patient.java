@@ -2,13 +2,12 @@ package dinoscientist.components;
 
 import dinoscientist.interfaces.IComponent;
 import dinoscientist.interfaces.IClient;
-
 import java.util.Random;
 import java.util.Hashtable;
 
 public class Patient implements IClient{
 
-    private Hashtable<String,Int> disease;
+    private Hashtable<String,Integer> disease;
 
     private IDataSet DataSet;
     

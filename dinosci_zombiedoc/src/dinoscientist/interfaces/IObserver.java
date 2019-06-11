@@ -2,8 +2,6 @@ package dinoscientist.interfaces;
 
 import java.util.List;
 
-import dinoscientist.interfaces.IObserver;
-
-public interface ICRM extends IObserver, IComponent{
+public interface IObserver{
     public List<String> update( List<Integer> respostas );
 }

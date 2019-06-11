@@ -1,19 +1,23 @@
 package dinoscientist.components;
 
 import dinoscientist.interfaces.IFirst;
-import dinoapi.interfaces.IQuestion;
+
+import java.util.List;
+
+import dinoapi.components.SintomaDoenca;
+import dinoapi.interfaces.IQuestions;
 
 import dinoscientist.interfaces.IComponent;
 
-public class FirstOpinion extends IFirst{
+public class FirstOpinion implements IFirst{
     
-    IQuestion question;
+    IQuestions question;
 
-    public connect ( IQuestion question ){
+    public void connect ( IQuestions question ){
         this.question = question;
     }
 
-    public List<SintomaDoenca> getBestQuestion( String dataset ){
-        return this.question.list(String dataset);
+    public List<SintomaDoenca> getBestQuestion( String dataset ) throws Exception{
+        return this.question.list(dataset);
     }
 }

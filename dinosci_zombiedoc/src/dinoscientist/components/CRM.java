@@ -1,18 +1,20 @@
 package dinoscientist.components;
 
-import br.unicamp.mc322.zumbidocapi.Examine;
-import dinoscientist.components.ICRM;
-import dinoscientist.components.IComponent;
+import java.util.List;
+
+import dinoapi.components.Examine;
+import dinoscientist.interfaces.ICRM;
+import dinoscientist.interfaces.IComponent;
 
 public class CRM implements ICRM{
     
     Examine examine;
   
-    public connect(Examine examine){
+    public void connect(Examine examine){
         this.examine = examine;
     }
     
-    public getExamine(){
+    public Examine getExamine(){
         return this.examine;
     }
     
