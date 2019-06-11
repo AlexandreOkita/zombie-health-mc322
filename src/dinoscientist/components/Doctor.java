@@ -19,13 +19,19 @@ public class Doctor implements IDoctor, ISubject{
     String opinion;
     int answer;
     ArrayList<String> others_opinions;
+    
     connect(pat);
+    
     System.out.println("Doctor: Hello, "+pat.getName()+ " I'm "+name);
+    
     ArrayList<String> answers = new ArrayList<String>();
+    
     for(SintomaDoenca ques: questions){
       System.out.println(ques+" ?");
       answer = (pat.getSintoma(ques.getSintoma()); 
+                
       if (answer == 1){
+        
         System.out.println("Yes");
         answers.add(ques.getSintoma());
         f_opinion = ques.getDoenca();
@@ -35,17 +41,23 @@ public class Doctor implements IDoctor, ISubject{
     }
     System.out.println("Doctor: I think it is "+f_opinion);
     System.out.println("**Taking care of patient**")
+                
     if(pat.getDoenca().equalsIgnoreCase(f_opinion)){
       System.out.println("We save "+pat.getNome());
       return f_opinion;
     }
+                
     else{
+      
       System.out.println(pat.getName()+" is not getting better :(");
       System.out.println("I will check with the council");
+      
       attachCRM(crm);
+      
       others_opinions = notifyCRM(pat);
       System.out.println("Then, it is "+others_opinions.get(1));
       System.out.println("**Taking care of patient (again)**")
+        
       if(pat.getDoenca().equalsIgnoreCase(f_opinion)){
         System.out.println("We save "+pat.getNome());
         return others_opinions.get(1);
