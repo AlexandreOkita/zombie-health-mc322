@@ -9,8 +9,7 @@ public interface IDoctor extends IComponent{
     public List<SintomaDoenca> getSintoma();
     public List<Integer> getRespostas();
     public String getFOpinion();
+    public void connect( ICRM crm );
     public void connect(IClient patient);
     public List<String> diagnostic(List<SintomaDoenca> questions);
-    public void attachCRM(ICRM council);
-    public void dettachCRM();
 }
