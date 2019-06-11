@@ -36,7 +36,6 @@ Método | Objetivo
 `setDataSource` | `Carrega o dataset com a global.csv. Em seguida, o dataset faz as manipulações necessárias.`
 
 
-
 ### Interface `ISecondOpinion`
 Extende outras três interfaces : `IDataSet`, `ISplitDataSet` e `IPatient`. Interface responsável por obter tanto a doença mais provável quanto a segunda mais provável, caso exista.
 
@@ -55,17 +54,6 @@ Método | Objetivo
 
 ### Interface `ICRM`
 Observer do Pattern Observer. Responsável por processar a repostas do doutor e dar um feedback
-
-Método | Objetivo
------- | --------
-`update` | `Atualiza o CRM e devolve o feedback`
-
-### Interface `ISubject`
-Observed do Pattern Observer. Responsável por processar a repostas do doutor e dar um feedback. Extendido por ###Doctor
-
-Método | Objetivo
------- | --------
-`update` | `Atualiza o CRM e devolve o feedback`
 
 Método | Objetivo
 ------ | --------
