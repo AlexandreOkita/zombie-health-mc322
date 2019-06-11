@@ -1,6 +1,8 @@
 package dinoscientist.components;
 
 import dinoscientist.interfaces.IComponent;
+import dinoscientist.interfaces.IDataSet;
+import dinoscientist.interfaces.ICRM;
 import dinoscientist.interfaces.IClient;
 import java.util.Random;
 import java.util.Hashtable;
@@ -11,44 +13,34 @@ public class Patient implements IClient{
 
     private IDataSet DataSet;
     
-    private ICRM crm;
+    private String name;
     
-    pubic void connectCRM ( ICRM crm ){
-        this.crm = crm;
+    public Patient() {
+    	this.name = "Teste";
     }
+    
 
     public void connectDataSet( IDataSet data ){
-        this.DataSet = data;    // (2) pegue um sintoma randômico
+        this.DataSet = data;
     }
     
-    public void setDisease(int n_diseases){
+    public void setDisease(){
         
         Random rand = new Random();
         
-        this.disease = new Hashtable<String,Int>();
+        this.disease = new Hashtable<String,Integer>();
         
-        String[] att = dataset.requestAttributes();
-        for ( String sin : att ){
-            disease.put( sin , rand.nextInt(2) );
-            System.out.println(disease.get(idx));
-        }
-    }
-    
-    public void getSecondOpinion(){
-        
-		List<String> outrasOpcoes = crm.execute(dataset, SintomasPat); // dataset é um pathing de um dataset global;
-		int i = 1;
-		for ( String opc : outrasOpcoes ) {
-			System.out.println(i+": "+opc);
-			i++;
+        String[] att = DataSet.requestAttributes();
+        for (int idx = 0; idx < att.length-1; idx++){
+			disease.put( att[idx] , rand.nextInt(2) );
 		}
     }
     
     public int getSintoma( String key ){
-        return this.disease.get(idx);
+        return this.disease.get(key);
     }
     
     public String getName(){
-        return this.name
+        return this.name;
     }
 }

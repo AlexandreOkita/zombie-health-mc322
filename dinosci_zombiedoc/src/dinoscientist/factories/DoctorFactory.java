@@ -1,5 +1,10 @@
-public class DoctorFactory implements IComponentFactory{
-  Doctor createDoctor(String name){
-    return new Doctor(name); 
+package dinoscientist.factories;
+
+import dinoscientist.components.Doctor;
+import dinoscientist.interfaces.IComponent;
+
+public class DoctorFactory extends ComponentFactory{
+  public IComponent getComponent(){
+    return new Doctor(); 
   }
 }

@@ -8,17 +8,19 @@ import dinoscientist.interfaces.IComponent;
 
 public class CRM implements ICRM{
     
-    Examine examine;
+    private Examine examine;
+    private String dataset;
   
-    public void connect(Examine examine){
+    public void connect(Examine examine, String dataset){
         this.examine = examine;
+        this.dataset = dataset;
     }
     
     public Examine getExamine(){
         return this.examine;
     }
     
-    public List<String> update( List<Intenger> respostas ){
+    public List<String> update( List<Integer> respostas ) throws Exception{
         return this.examine.execute(dataset, respostas);
     }
 }
