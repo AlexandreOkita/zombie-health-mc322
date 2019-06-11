@@ -14,7 +14,7 @@ public class Doctor implements IDoctor{
     private String f_opinion;
     private ICRM council;
     private IClient patient;
-    private List<SintomaDoenca> sintomas; //importantes para o uso da interface gr·fica
+    private List<SintomaDoenca> sintomas; //importantes para o uso da interface gr√°fica
     private List<Integer> respostas;
 
     public Doctor(){
@@ -36,6 +36,10 @@ public class Doctor implements IDoctor{
     
     public String getFOpinion() {
         return f_opinion;   
+    }
+    
+    public void connect(ICRM crm ){
+        this.council = crm;
     }
     
     public void connect(IClient patient){
@@ -70,19 +74,5 @@ public class Doctor implements IDoctor{
         text.add("I think it is "+f_opinion);
         
         return text;
-          }
-
-//      public void notifyCRM(IClient pat, List<Integer> respostas){
-//          List<String> second_opinion;
-//          second_opinion = council.update(respostas);
-//          for ( int idx = 0 ; idx < second_opinion.size() ; ++idx ){
-//              System.out.println(idx + "." + second_opinion.get(idx) );
-//          }
-//      }
-      public void attachCRM(ICRM council){
-          this.council = council;
-      }
-      public void dettachCRM(){
-          council = null;
-      }
+        }
 }
