@@ -1,5 +1,11 @@
 package dinoscientist.factories;
 
-public class CRMFactory{
-    
+import dinoscientist.interfaces.IComponent;
+import dinoscientist.components.CRM;
+
+public class CRMFactory extends ComponentFactory{
+    @Override
+    public IComponent getComponent() {
+        return new CRM();
+    }
 }
