@@ -3,6 +3,7 @@ public class Doctor implements IDoctor, ISubject{
     private String f_opinion;
     private ICRM council;
     private IPatient patient;
+    private List<SintomaDoenca> sintomas;
 
     public Doctor(){
         this.name = this.toString();
@@ -10,7 +11,10 @@ public class Doctor implements IDoctor, ISubject{
         council = null;
         patient = null;
     }
-
+    
+    public List<SintomaDoenca> getSintoma() {
+        return sintomas;   
+    }
     public void connect(IPatient patient){
        this.patient = patient; 
     }
