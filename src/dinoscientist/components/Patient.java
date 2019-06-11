@@ -22,31 +22,22 @@ public class Patient implements IClient{
         this.DataSet = data;    // (2) pegue um sintoma randômico
     }
     
-    public void setDisease(int n_diseases){
+    public void setDisease(){
         
         Random rand = new Random();
         
         this.disease = new Hashtable<String,Int>();
         
         String[] att = dataset.requestAttributes();
-        for ( String sin : att ){
-            disease.put( sin , rand.nextInt(2) );
-            System.out.println(disease.get(idx));
-        }
-    }
-    
-    public void getSecondOpinion(){
-        
-		List<String> outrasOpcoes = crm.execute(dataset, SintomasPat); // dataset é um pathing de um dataset global;
-		int i = 1;
-		for ( String opc : outrasOpcoes ) {
-			System.out.println(i+": "+opc);
-			i++;
-		}
+	for (int idx = 0; idx < att.length-1; idx++){
+		disease.put( att[idx] , rand.nextInt(2) );
+  		System.out.print(att[idx] + ", ");
+	}
+	System.out.println("");
     }
     
     public int getSintoma( String key ){
-        return this.disease.get(idx);
+        return this.disease.get(key);
     }
     
     public String getName(){
