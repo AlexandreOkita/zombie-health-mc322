@@ -2,18 +2,12 @@ import java.util.Random;
 import java.util.Hashtable<K,V>;
 
 public class Patient implements IClient{
-    
-    private String name;
 
     private Hashtable<String,Int> disease;
 
     private IDataSet DataSet;
     
     private ICRM crm;
-        
-    public Patient( String nome ){
-        this.some = nome;
-    }
     
     pubic void connectCRM ( ICRM crm ){
         this.crm = crm;
