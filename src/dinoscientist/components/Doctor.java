@@ -28,7 +28,7 @@ public class Doctor implements IDoctor, ISubject{
 
         System.out.println("Doctor: Hello, "+pat.getName()+ " I'm "+name);
 
-        List<String> answers = new ArrayList<Integer>(); //ta certo o tipo okita?
+        List<Integer> answers = new ArrayList<Integer>(); //ta certo o tipo okita?
 
         for(SintomaDoenca ques: questions)
         {
@@ -38,7 +38,7 @@ public class Doctor implements IDoctor, ISubject{
             if (answer == 1)
             {  
                 System.out.println("Patient: Yes");
-                answers.add(ques.getSintoma());
+                answers.add(answer);
                 f_opinion = ques.getDoenca();
                 break;
             }
