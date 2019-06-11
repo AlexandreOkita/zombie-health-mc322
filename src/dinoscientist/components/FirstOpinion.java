@@ -1,4 +1,4 @@
-package dinoscientist.components.FirstOpinion;
+package dinoscientist.components;
 
 import dinoscientist.interfaces.IFirst;
 import dinoscientist.interfaces.IComponent;
