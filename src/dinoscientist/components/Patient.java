@@ -1,3 +1,8 @@
+package dinoscientist.components;
+
+import dinoscientist.interfaces.IComponent;
+import dinoscientist.interfaces.IClient;
+
 import java.util.Random;
 import java.util.Hashtable<K,V>;
 
