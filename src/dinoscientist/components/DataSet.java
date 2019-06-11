@@ -7,13 +7,13 @@ import java.util.ArrayList;
 
 import dinoscientist.interfaces.IDataSet;
 
-public class DataSetComponent implements IDataSet{
+public class DataSet implements IDataSet{
     
         private String dataSource = null;
         private String[] attributes = null;
         private String[][] instances = null;
 
-        public DataSetComponent() {
+        public DataSet() {
             /* nothing */
         }
 
