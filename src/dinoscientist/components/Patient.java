@@ -22,7 +22,7 @@ public class Patient implements IClient{
 
 		Random rand = new Random();
 
-		this.disease = new Hashtable<String,Int>();
+		this.disease = new Hashtable<String,Intenger>();
 
 		String[] att = dataset.requestAttributes();
 		
