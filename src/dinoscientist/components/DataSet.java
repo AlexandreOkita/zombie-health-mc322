@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import dinoscientis.interfaces.IDataSet;
+import dinoscientist.interfaces.IDataSet;
 
 public class DataSetComponent implements IDataSet{
     
