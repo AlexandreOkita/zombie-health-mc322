@@ -24,14 +24,15 @@ public class Doctor implements IDoctor, ISubject{
     
     System.out.println("Doctor: Hello, "+pat.getName()+ " I'm "+name);
     
-    List<String> answers = new ArrayList<String>(); //ta certo o tipo okita?
+    List<String> answers = new ArrayList<Integer>(); //ta certo o tipo okita?
     
-    for(SintomaDoenca ques: questions){
+    for(SintomaDoenca ques: questions)
+    {
       System.out.println(ques+" ?");
       answer = (pat.getSintoma(ques.getSintoma()); 
                 
-      if (answer == 1){
-        
+      if (answer == 1)
+      {  
         System.out.println("Yes");
         answers.add(ques.getSintoma());
         f_opinion = ques.getDoenca();
@@ -39,32 +40,32 @@ public class Doctor implements IDoctor, ISubject{
       }
       System.out.println("No");
     }
+    
     System.out.println("Doctor: I think it is "+f_opinion);
     System.out.println("**Taking care of patient**")
                 
     if(pat.getDoenca().equalsIgnoreCase(f_opinion)){
       System.out.println("We save "+pat.getNome());
       return f_opinion;
-    }
-                
-    else{
-      
+    }               
+    else{ 
       System.out.println(pat.getName()+" is not getting better :(");
       System.out.println("I will check with the council");      
-      others_opinions = notifyCRM(pat,...);             //ARRUMAR PARAMETROS
+      others_opinions = notifyCRM(pat,answers);             //ARRUMAR PARAMETROS
       System.out.println("Then, it is "+others_opinions.get(1));
       System.out.println("**Taking care of patient (again)**")
         
-      if(pat.getDoenca().equalsIgnoreCase(f_opinion)){
+      if(pat.getDoenca().equalsIgnoreCase(f_opinion))
+      {
         System.out.println("We save "+pat.getNome());
         return others_opinions.get(1);
       }
     }
   }
 
-  public List<String> notifyCRM(IPatient pat, List<String> retList){ //ARRUMAR PARAMETROS
+  public List<String> notifyCRM(IPatient pat, List<Integer> respostas){ //ARRUMAR PARAMETROS
     List<String> second_opinion;
-    second_opinion = council.updateDesease(pat); //trocar aqui nome da funcao para o pattern do observer
+    second_opinion = council.update(respostas); //trocar aqui nome da funcao para o pattern do observer
     return second_opinion;
   }
 
@@ -75,4 +76,5 @@ public class Doctor implements IDoctor, ISubject{
   public void dettachCRM(){
     council = null;
   }
+                
 }
