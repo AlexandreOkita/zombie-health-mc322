@@ -51,7 +51,7 @@ public class Doctor implements IDoctor, ISubject{
       
       System.out.println(pat.getName()+" is not getting better :(");
       System.out.println("I will check with the council");      
-      others_opinions = notifyCRM(pat);
+      others_opinions = notifyCRM(pat,...);             //ARRUMAR PARAMETROS
       System.out.println("Then, it is "+others_opinions.get(1));
       System.out.println("**Taking care of patient (again)**")
         
@@ -62,11 +62,10 @@ public class Doctor implements IDoctor, ISubject{
     }
   }
 
-  public String notifyCRM(IPatient pat, ArrayList<String> retList){
-    String second_opinion;
+  public List<String> notifyCRM(IPatient pat, List<String> retList){ //ARRUMAR PARAMETROS
+    List<String> second_opinion;
     second_opinion = council.updateDesease(pat); //trocar aqui nome da funcao para o pattern do observer
-      return f_opinion;
-    }
+    return second_opinion;
   }
 
   public void attachCRM(ICRM council){
