@@ -7,8 +7,12 @@ public class CRM implements ICRM{
     
     Examine examine;
   
-    public CRM( Examine examine){
+    public connect( Examine examine ){
         this.examine = examine;
+    }
+    
+    public getExamine(){
+        return this.examine;
     }
     
     public List<String> update( List<Intenger> respostas ){
