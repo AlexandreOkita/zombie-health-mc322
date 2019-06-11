@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dinoapi.components.SintomaDoenca;
-//ObserverPattern - Subject
+
 public interface IDoctor extends IComponent{
-  public List<String> diagnostic(List<SintomaDoenca> questions); //ESTAO CERTOS OS PARAMETROS?
-//  public List<String> notifyCRM(IClient pat, List<Integer> respostas); //notify do pattern
+    public List<SintomaDoenca> getSintoma();
+    public List<Integer> getRespostas();
+    public String getFOpinion();
+    public void connect(IClient patient);
+    public List<String> diagnostic(List<SintomaDoenca> questions);
+    public void attachCRM(ICRM council);
+    public void dettachCRM();
 }
